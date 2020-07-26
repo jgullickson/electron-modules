@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <div class='banner'></div>
+    <div class='message-box'>
+        <div class='img-div'>
+            <img src='./refresh.png' class='update-img'>
+            <img src='./tf.png' class='tf-img'>
+        </div>
+        <div class='message-text'>
+            <h3>Checking for updates...</h3>
+            <small>Please wait a moment.</small>
+        </div>
+    </div>
+</body>
+<style>
+    body, html {
+        /* background-color: #292e33; */
+        background-color: whitesmoke;
+        color: whitesmoke;
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+        height: 200px;
+        width: 400px;
+    }
+    .banner {
+        position: fixed;
+        width: 100%;
+        background: linear-gradient(rgb(30, 203, 255), rgb(113, 208, 236));
+        height: 20px;
+    }
+    .message-box {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0 auto;
+    }
+    .img-div{
+        position: relative;
+    }
+    .update-img {
+        position: absolute;
+        bottom: 3px;
+        right: -5px;
+        height: 30px;
+        display: block;
+        animation: update_spin infinite 2s ease-in-out;
+    }
+    .tf-img {
+        height: 90px;
+    }
+    @keyframes update_spin{
+        to {
+            transform: rotateZ(360deg);
+        }
+    }
+    h3 {
+        color: #292e33;
+        font-weight: 400;
+        margin: 0.25em 0;
+    }
+    small {
+        color: rgb(30, 203, 255);
+    }
+</style>
+</html>
